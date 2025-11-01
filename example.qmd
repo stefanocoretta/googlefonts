@@ -8,9 +8,15 @@ filters:
 googlefonts: ["Momo Trust Display", "Lato", "Ubuntu Mono"]
 ---
 
-## Heading
+## Use Google Fonts
 
-This filter adds formatting to heading text.
+You can use *Google Fonts*. Just **list them** as an array with the `googlefonts` key:
+
+```yaml
+googlefonts: ["Poetsen One", "Ubuntu Mono", "Lato"]
+```
+
+You can customise the fonts in the `custom.scss` file.
 
 ## Code
 
