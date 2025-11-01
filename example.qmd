@@ -1,0 +1,21 @@
+---
+title: "Googlefonts Example"
+format:
+  revealjs:
+    theme: [default, custom.scss]
+filters:
+  - googlefonts
+googlefonts: ["Momo Trust Display", "Lato", "Ubuntu Mono"]
+---
+
+## Heading
+
+This filter adds formatting to heading text.
+
+## Code
+
+```r
+a <- 4
+print(1 + 2)
+```
+
