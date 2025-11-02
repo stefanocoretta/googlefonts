@@ -8,17 +8,44 @@ filters:
 googlefonts: ["Momo Trust Display", "Lato", "Ubuntu Mono"]
 ---
 
+## Activate the filter
+
+Add the following in your YAML preamble:
+
+```yaml
+filters:
+  - googlefonts
+```
+
 ## Use Google Fonts
 
-You can use *Google Fonts*. Just **list them** as an array with the `googlefonts` key:
+You can now use *Google Fonts*. Just **list them** as an array with the `googlefonts` key in the YAML preamble:
 
 ```yaml
 googlefonts: ["Poetsen One", "Ubuntu Mono", "Lato"]
 ```
 
-You can customise the fonts in the `custom.scss` file.
+Then, set the fonts in the `custom.scss` file using the relevant [Sass variables](https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables).
+
+```scss
+$font-family-sans-serif: "Lato";
+$font-family-monospace: "Ubuntu Mono";
+$presentation-heading-font: "Momo Trust Display";
+```
+
+## Selecting styles and axes
+
+You can select styles and axes by specifying them with the font name according to the [Google Fonts API](https://developers.google.com/fonts/docs/css2#axis_ranges):
+
+```yaml
+googlefonts: ["Roboto:ital,wght@0,100..900;1,100..900"]
+```
+
+If you don't specify any style or axis, the following default will be applied: `ital,wght@0,400;0,700;1,400;1,700`. This loads normal, italics, bold and bold italics.
 
 ## Code
+
+You can set the font for code with the `$font-family-monospace` Sass variable in `custom.scss`.
 
 ```r
 a <- 4

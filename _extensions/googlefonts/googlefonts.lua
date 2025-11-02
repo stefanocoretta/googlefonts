@@ -9,7 +9,13 @@ function Meta(meta)
       for i, font in ipairs(fonts) do
         font_str = pandoc.utils.stringify(font)
 
-        font_list[#font_list+1] = "family=" .. string.gsub(font_str, " ", "+")
+        font_str = string.gsub(font_str, " ", "+") 
+
+        if not string.find(font_str, ":") then
+          font_str = font_str .. ":ital,wght@0,400;0,700;1,400;1,700"
+        end
+
+        font_list[#font_list+1] = "family=" .. font_str
 
       end
     end
